@@ -1,0 +1,33 @@
+<h1 class="row">Bienvenidx usuarix:</h1>
+
+<div class="row">
+
+
+<p>¡Hola {{data.user.firstName}} {{data.user.lastName}}!</p>
+<p>Tu correo es {{data.user.email}}</p>
+
+<img src="" alt="" srcset="{{data.user.photo}}">
+
+
+
+  <div class="col" id="user-session">
+
+      
+  </div>
+
+  <form
+    id="form-product"
+    action="/api/logout"
+    method="POST"
+    class="col"
+  >
+
+    <button
+      id="btn-addproduct"
+      type="submit"
+      class="btn btn-primary"
+    >Desloguear</button>
+
+  </form>
+
+</div>

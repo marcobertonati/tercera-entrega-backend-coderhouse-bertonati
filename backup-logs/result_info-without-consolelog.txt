@@ -1,0 +1,305 @@
+Statistical profiling result from info-without-consolelog-v8.log, (9988 ticks, 0 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+   9457   94.7%          C:\WINDOWS\SYSTEM32\ntdll.dll
+    503    5.0%          C:\Program Files\nodejs\node.exe
+      3    0.0%          C:\WINDOWS\System32\KERNELBASE.dll
+      2    0.0%          C:\WINDOWS\System32\WS2_32.dll
+      1    0.0%          C:\WINDOWS\system32\mswsock.dll
+      1    0.0%          C:\WINDOWS\System32\KERNEL32.DLL
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+      4    0.0%   19.0%  LazyCompile: *next D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\express\lib\router\index.js:176:16
+      2    0.0%    9.5%  LazyCompile: *maybePromise D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\mongodb\lib\utils.js:506:22
+      2    0.0%    9.5%  LazyCompile: *_storeHeader _http_outgoing.js:360:22
+      1    0.0%    4.8%  RegExp: [^\t\x20-\x7e\x80-\xff]
+      1    0.0%    4.8%  LazyCompile: *writeOrBuffer _stream_writable.js:334:23
+      1    0.0%    4.8%  LazyCompile: *write buffer.js:607:12
+      1    0.0%    4.8%  LazyCompile: *toString D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\mongodb\lib\utils.js:1075:13
+      1    0.0%    4.8%  LazyCompile: *serializeInto D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\bson\lib\parser\serializer.js:549:23
+      1    0.0%    4.8%  LazyCompile: *resolve path.js:130:10
+      1    0.0%    4.8%  LazyCompile: *isUint8Array internal/util/types.js:23:22
+      1    0.0%    4.8%  LazyCompile: *header D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\express\lib\response.js:754:29
+      1    0.0%    4.8%  LazyCompile: *handle D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\express\lib\router\layer.js:86:49
+      1    0.0%    4.8%  LazyCompile: *handle D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\express\lib\router\index.js:136:31
+      1    0.0%    4.8%  LazyCompile: *emit events.js:263:44
+      1    0.0%    4.8%  LazyCompile: *command D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\mongodb\lib\sdam\server.js:133:12
+      1    0.0%    4.8%  LazyCompile: *Writable.write _stream_writable.js:258:36
+
+ [C++]:
+   ticks  total  nonlib   name
+
+ [Summary]:
+   ticks  total  nonlib   name
+     21    0.2%  100.0%  JavaScript
+      0    0.0%    0.0%  C++
+     23    0.2%  109.5%  GC
+   9967   99.8%          Shared libraries
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+   9457   94.7%  C:\WINDOWS\SYSTEM32\ntdll.dll
+
+    503    5.0%  C:\Program Files\nodejs\node.exe
+    200   39.8%    C:\Program Files\nodejs\node.exe
+     14    7.0%      LazyCompile: ~writevGeneric internal/stream_base_commons.js:118:23
+     14  100.0%        LazyCompile: ~Socket._writeGeneric net.js:759:42
+     14  100.0%          LazyCompile: ~Socket._writev net.js:791:36
+     14  100.0%            LazyCompile: ~doWrite _stream_writable.js:367:17
+     11    5.5%      LazyCompile: ~wrapSafe internal/modules/cjs/loader.js:964:18
+     11  100.0%        LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1017:37
+     11  100.0%          LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1072:37
+     10   90.9%            LazyCompile: ~Module.load internal/modules/cjs/loader.js:916:33
+      1    9.1%            LazyCompile: *Module._load internal/modules/cjs/loader.js:704:24
+      9    4.5%      LazyCompile: ~stat internal/modules/cjs/loader.js:132:14
+      5   55.6%        LazyCompile: ~Module._findPath internal/modules/cjs/loader.js:444:28
+      5  100.0%          LazyCompile: ~Module._resolveFilename internal/modules/cjs/loader.js:796:35
+      5  100.0%            LazyCompile: ~Module._load internal/modules/cjs/loader.js:704:24
+      4   44.4%        LazyCompile: ~tryFile internal/modules/cjs/loader.js:334:17
+      4  100.0%          LazyCompile: ~tryExtensions internal/modules/cjs/loader.js:350:23
+      3   75.0%            LazyCompile: ~Module._findPath internal/modules/cjs/loader.js:444:28
+      1   25.0%            LazyCompile: ~tryPackage internal/modules/cjs/loader.js:288:20
+      9    4.5%      C:\Program Files\nodejs\node.exe
+      2   22.2%        LazyCompile: ~format D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\content-type\index.js:65:17
+      1   50.0%          LazyCompile: ~setCharset D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\express\lib\utils.js:250:41
+      1  100.0%            LazyCompile: ~send D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\express\lib\response.js:107:25
+      1   50.0%          LazyCompile: *send D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\express\lib\response.js:107:25
+      1  100.0%            LazyCompile: ~json D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\express\lib\response.js:239:25
+      2   22.2%        LazyCompile: ~checkInvalidHeaderChar _http_common.js:230:32
+      2  100.0%          LazyCompile: ~<anonymous> _http_outgoing.js:546:45
+      2  100.0%            LazyCompile: *hidden internal/errors.js:285:25
+      1   11.1%        LazyCompile: ~wrapSafe internal/modules/cjs/loader.js:964:18
+      1  100.0%          LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1017:37
+      1  100.0%            LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1072:37
+      1   11.1%        LazyCompile: ~parsePayload D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\mongodb\lib\cmap\auth\scram.js:173:22
+      1  100.0%          LazyCompile: ~<anonymous> D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\mongodb\lib\cmap\auth\scram.js:152:78
+      1  100.0%            LazyCompile: ~messageHandler D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\mongodb\lib\cmap\connection.js:421:35
+      1   11.1%        LazyCompile: ~compressible D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\compressible\index.js:41:23
+      1  100.0%          LazyCompile: ~shouldCompress D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\compression\index.js:254:25
+      1  100.0%            LazyCompile: ~onResponseHeaders D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\compression\index.js:140:47
+      1   11.1%        LazyCompile: ~<anonymous> D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\mongoose\lib\helpers\pluralize.js:86:34
+      1  100.0%          C:\Program Files\nodejs\node.exe
+      1  100.0%            LazyCompile: ~pluralize D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\mongoose\lib\helpers\pluralize.js:82:19
+      1   11.1%        LazyCompile: ~<anonymous> D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\connect-mongo\build\main\lib\MongoStore.js:236:10
+      1  100.0%          LazyCompile: ~set D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\connect-mongo\build\main\lib\MongoStore.js:234:8
+      1  100.0%            LazyCompile: ~save D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\express-session\session\session.js:71:54
+      7    3.5%      LazyCompile: ~handleWriteReq internal/stream_base_commons.js:47:24
+      7  100.0%        LazyCompile: ~writeGeneric internal/stream_base_commons.js:143:22
+      7  100.0%          LazyCompile: ~Socket._writeGeneric net.js:759:42
+      7  100.0%            LazyCompile: ~Socket._write net.js:796:35
+      6    3.0%      LazyCompile: ~realpathSync fs.js:1650:22
+      6  100.0%        LazyCompile: ~toRealPath internal/modules/cjs/loader.js:343:20
+      5   83.3%          LazyCompile: ~tryFile internal/modules/cjs/loader.js:334:17
+      4   80.0%            LazyCompile: ~tryExtensions internal/modules/cjs/loader.js:350:23
+      1   20.0%            LazyCompile: ~tryPackage internal/modules/cjs/loader.js:288:20
+      1   16.7%          LazyCompile: ~Module._findPath internal/modules/cjs/loader.js:444:28
+      1  100.0%            LazyCompile: ~Module._resolveFilename internal/modules/cjs/loader.js:796:35
+      5    2.5%      LazyCompile: ~cookieParser D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\cookie-parser\index.js:44:32
+      4   80.0%        LazyCompile: ~handle D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\express\lib\router\layer.js:86:49
+      4  100.0%          LazyCompile: *next D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\express\lib\router\index.js:176:16
+      4  100.0%            LazyCompile: ~<anonymous> D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\express-session\index.js:485:38
+      1   20.0%        LazyCompile: *handle D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\express\lib\router\layer.js:86:49
+      1  100.0%          LazyCompile: *next D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\express\lib\router\index.js:176:16
+      1  100.0%            LazyCompile: ~<anonymous> D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\express-session\index.js:485:38
+      5    2.5%      LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:265:27
+      5  100.0%        LazyCompile: ~nativeModuleRequire internal/bootstrap/loaders.js:298:29
+      1   20.0%          LazyCompile: ~setupPrepareStackTrace internal/bootstrap/node.js:251:32
+      1  100.0%            Eval: ~<anonymous> internal/bootstrap/node.js:1:1
+      1   20.0%          LazyCompile: ~get fs.js:2156:8
+      1  100.0%            C:\Program Files\nodejs\node.exe
+      1   20.0%          Eval: ~<anonymous> tls.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:265:27
+      1   20.0%          Eval: ~<anonymous> internal/url.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:265:27
+      1   20.0%          Eval: ~<anonymous> internal/child_process.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:265:27
+      5    2.5%      LazyCompile: *nextTick internal/process/task_queues.js:101:18
+      2   40.0%        LazyCompile: *readableAddChunk _stream_readable.js:231:26
+      2  100.0%          LazyCompile: *write D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\mongodb\lib\cmap\connection.js:488:15
+      2  100.0%            LazyCompile: *command D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\mongodb\lib\cmap\connection.js:161:12
+      1   20.0%        LazyCompile: ~write_ _http_outgoing.js:678:16
+      1  100.0%          LazyCompile: ~write _http_outgoing.js:660:49
+      1  100.0%            LazyCompile: ~write D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\compression\index.js:78:32
+      1   20.0%        LazyCompile: ~resume _stream_readable.js:958:16
+      1  100.0%          LazyCompile: ~Readable.resume _stream_readable.js:944:37
+      1  100.0%            LazyCompile: ~_dump _http_incoming.js:290:49
+      1   20.0%        LazyCompile: ~maybeReadMore _stream_readable.js:593:23
+      1  100.0%          LazyCompile: ~addChunk _stream_readable.js:299:18
+      1  100.0%            LazyCompile: ~readableAddChunk _stream_readable.js:231:26
+      4    2.0%      LazyCompile: ~openSync fs.js:467:18
+      4  100.0%        LazyCompile: ~readFileSync fs.js:374:22
+      4  100.0%          LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1072:37
+      4  100.0%            LazyCompile: ~Module.load internal/modules/cjs/loader.js:916:33
+      4    2.0%      LazyCompile: ~compression D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\compression\index.js:59:31
+      3   75.0%        LazyCompile: *handle D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\express\lib\router\layer.js:86:49
+      3  100.0%          LazyCompile: *next D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\express\lib\router\index.js:176:16
+      3  100.0%            LazyCompile: ~cors D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\cors\lib\index.js:159:16
+      1   25.0%        LazyCompile: ~handle D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\express\lib\router\layer.js:86:49
+      1  100.0%          LazyCompile: *next D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\express\lib\router\index.js:176:16
+      1  100.0%            LazyCompile: ~cors D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\cors\lib\index.js:159:16
+      4    2.0%      LazyCompile: ~TLSSocket._start _tls_wrap.js:935:38
+      4  100.0%        LazyCompile: ~onceWrapper events.js:416:21
+      3   75.0%          LazyCompile: ~emit events.js:263:44
+      3  100.0%            LazyCompile: ~afterConnect net.js:1108:22
+      1   25.0%          LazyCompile: *emit events.js:263:44
+      1  100.0%            LazyCompile: ~afterConnect net.js:1108:22
+      4    2.0%      LazyCompile: ~Hmac internal/crypto/hash.js:107:14
+      4  100.0%        LazyCompile: ~createHmac crypto.js:146:20
+      3   75.0%          LazyCompile: ~exports.sign D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\cookie-signature\index.js:16:24
+      3  100.0%            LazyCompile: ~exports.unsign D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\cookie-signature\index.js:36:26
+      1   25.0%          LazyCompile: ~HMAC D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\mongodb\lib\cmap\auth\scram.js:214:14
+      1  100.0%            LazyCompile: ~continueScramConversation D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\mongodb\lib\cmap\auth\scram.js:93:35
+      4    2.0%      LazyCompile: *Long D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\bson\lib\long.js:58:18
+      3   75.0%        LazyCompile: ~Long.fromBits D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\bson\lib\long.js:88:30
+      3  100.0%          LazyCompile: ~Long.fromNumber D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\bson\lib\long.js:130:32
+      2   66.7%            LazyCompile: ~applySession D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\mongodb\lib\sessions.js:643:22
+      1   33.3%            LazyCompile: ~<anonymous> D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\mongodb\lib\cursor\abstract_cursor.js:442:46
+      1   25.0%        LazyCompile: *deserializeObject D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\bson\lib\parser\deserializer.js:53:27
+      1  100.0%          LazyCompile: *deserializeObject D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\bson\lib\parser\deserializer.js:53:27
+      1  100.0%            LazyCompile: *deserializeObject D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\bson\lib\parser\deserializer.js:53:27
+      3    1.5%      LazyCompile: ~writeHead _http_server.js:250:19
+      3  100.0%        LazyCompile: ~writeHead D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\on-headers\index.js:28:29
+      3  100.0%          LazyCompile: ~writeHead D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\on-headers\index.js:28:29
+      3  100.0%            LazyCompile: ~_implicitHeader _http_server.js:245:68
+      3    1.5%      LazyCompile: ~TLSSocket.getPeerCertificate _tls_wrap.js:972:50
+      3  100.0%        LazyCompile: ~onConnectSecure _tls_wrap.js:1483:25
+      2   66.7%          LazyCompile: ~emit events.js:263:44
+      2  100.0%            LazyCompile: ~TLSSocket._finishInit _tls_wrap.js:906:43
+      1   33.3%          LazyCompile: *emit events.js:263:44
+      1  100.0%            LazyCompile: ~TLSSocket._finishInit _tls_wrap.js:906:43
+      3    1.5%      LazyCompile: ~SecureContext _tls_common.js:60:23
+      3  100.0%        LazyCompile: ~createSecureContext _tls_common.js:94:59
+      3  100.0%          LazyCompile: ~connect _tls_wrap.js:1556:35
+      3  100.0%            LazyCompile: ~makeConnection D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\mongodb\lib\cmap\connect.js:227:24
+      3    1.5%      LazyCompile: *next D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\express\lib\router\index.js:176:16
+      1   33.3%        LazyCompile: ~initialize D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\passport\lib\middleware\initialize.js:44:29
+      1  100.0%          LazyCompile: ~handle D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\express\lib\router\layer.js:86:49
+      1  100.0%            LazyCompile: *next D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\express\lib\router\index.js:176:16
+      1   33.3%        LazyCompile: ~cookieParser D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\cookie-parser\index.js:44:32
+      1  100.0%          LazyCompile: *handle D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\express\lib\router\layer.js:86:49
+      1  100.0%            LazyCompile: *next D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\express\lib\router\index.js:176:16
+      1   33.3%        LazyCompile: *handle D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\express\lib\router\index.js:136:31
+      1  100.0%          LazyCompile: ~router D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\express\lib\router\index.js:46:18
+      1  100.0%            LazyCompile: ~handle D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\express\lib\router\layer.js:86:49
+      3    1.5%      LazyCompile: *Timestamp D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\bson\lib\timestamp.js:26:23
+      3  100.0%        LazyCompile: *deserializeObject D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\bson\lib\parser\deserializer.js:53:27
+      2   66.7%          LazyCompile: *deserializeObject D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\bson\lib\parser\deserializer.js:53:27
+      2  100.0%            LazyCompile: *parse D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\mongodb\lib\cmap\commands.js:577:10
+      1   33.3%          LazyCompile: *parse D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\mongodb\lib\cmap\commands.js:577:10
+      1  100.0%            LazyCompile: ~messageHandler D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\mongodb\lib\cmap\connection.js:421:35
+      2    1.0%      LazyCompile: ~writetop D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\express-session\index.js:270:24
+      1   50.0%        LazyCompile: ~end D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\express-session\index.js:250:27
+      1  100.0%          LazyCompile: ~send D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\express\lib\response.js:107:25
+      1  100.0%            LazyCompile: ~json D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\express\lib\response.js:239:25
+      1   50.0%        LazyCompile: *send D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\express\lib\response.js:107:25
+      1  100.0%          LazyCompile: ~json D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\express\lib\response.js:239:25
+      1  100.0%            LazyCompile: *send D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\express\lib\response.js:107:25
+      2    1.0%      LazyCompile: ~write_ _http_outgoing.js:678:16
+      2  100.0%        LazyCompile: ~end _http_outgoing.js:769:45
+      2  100.0%          LazyCompile: ~end D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\compression\index.js:92:28
+      2  100.0%            LazyCompile: ~writeend D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\express-session\index.js:260:24
+      2    1.0%      LazyCompile: ~update internal/crypto/hash.js:74:40
+      2  100.0%        LazyCompile: ~hash D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\express-session\index.js:596:14
+      1   50.0%          LazyCompile: ~isModified D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\express-session\index.js:425:24
+      1  100.0%            LazyCompile: ~shouldSetCookie D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\express-session\index.js:464:29
+      1   50.0%          LazyCompile: ~inflate D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\express-session\index.js:371:22
+      1  100.0%            LazyCompile: ~<anonymous> D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\express-session\index.js:485:38
+      2    1.0%      LazyCompile: ~slice buffer.js:608:12
+      1   50.0%        LazyCompile: ~toString buffer.js:776:46
+      1  100.0%          LazyCompile: ~deserializeObject D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\bson\lib\parser\deserializer.js:53:27
+      1  100.0%            LazyCompile: ~deserialize D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\bson\lib\parser\deserializer.js:24:21
+      1   50.0%        LazyCompile: *deserializeObject D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\bson\lib\parser\deserializer.js:53:27
+      1  100.0%          LazyCompile: *deserializeObject D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\bson\lib\parser\deserializer.js:53:27
+      1  100.0%            LazyCompile: ~deserialize D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\bson\lib\parser\deserializer.js:24:21
+      2    1.0%      LazyCompile: ~shouldCompress D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\compression\index.js:254:25
+      2  100.0%        LazyCompile: ~onResponseHeaders D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\compression\index.js:140:47
+      2  100.0%          LazyCompile: ~writeHead D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\on-headers\index.js:28:29
+      2  100.0%            LazyCompile: ~writeHead D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\on-headers\index.js:28:29
+      2    1.0%      LazyCompile: ~session D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\express-session\index.js:179:26
+      2  100.0%        LazyCompile: *handle D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\express\lib\router\layer.js:86:49
+      2  100.0%          LazyCompile: *next D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\express\lib\router\index.js:176:16
+      2  100.0%            LazyCompile: ~compression D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\compression\index.js:59:31
+      2    1.0%      LazyCompile: ~selectServer D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\mongodb\lib\sdam\topology.js:281:17
+      2  100.0%        LazyCompile: ~executeWithServerSelection D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\mongodb\lib\operations\execute_operation.js:65:36
+      2  100.0%          LazyCompile: ~<anonymous> D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\mongodb\lib\operations\execute_operation.js:16:43
+      1   50.0%            LazyCompile: ~maybePromise D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\mongodb\lib\utils.js:506:22
+      1   50.0%            LazyCompile: *maybePromise D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\mongodb\lib\utils.js:506:22
+      2    1.0%      LazyCompile: ~read internal/modules/package_json_reader.js:16:14
+      2  100.0%        LazyCompile: ~readPackage internal/modules/cjs/loader.js:240:21
+      1   50.0%          LazyCompile: ~resolveExports internal/modules/cjs/loader.js:422:24
+      1  100.0%            LazyCompile: ~Module._findPath internal/modules/cjs/loader.js:444:28
+      1   50.0%          LazyCompile: ~readPackageScope internal/modules/cjs/loader.js:271:26
+      1  100.0%            LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1072:37
+      2    1.0%      LazyCompile: ~originalurl D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\parseurl\index.js:65:22
+      2  100.0%        LazyCompile: ~session D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\express-session\index.js:179:26
+      2  100.0%          LazyCompile: *handle D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\express\lib\router\layer.js:86:49
+      2  100.0%            LazyCompile: *next D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\express\lib\router\index.js:176:16
+      2    1.0%      LazyCompile: ~initialize D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\passport\lib\middleware\initialize.js:44:29
+      1   50.0%        LazyCompile: ~handle D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\express\lib\router\layer.js:86:49
+      1  100.0%          LazyCompile: *next D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\express\lib\router\index.js:176:16
+      1  100.0%            LazyCompile: ~cookieParser D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\cookie-parser\index.js:44:32
+      1   50.0%        LazyCompile: *handle D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\express\lib\router\layer.js:86:49
+      1  100.0%          LazyCompile: *next D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\express\lib\router\index.js:176:16
+      1  100.0%            LazyCompile: ~cookieParser D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\cookie-parser\index.js:44:32
+      2    1.0%      LazyCompile: ~hash D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\express-session\index.js:596:14
+      1   50.0%        LazyCompile: ~isModified D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\express-session\index.js:425:24
+      1  100.0%          LazyCompile: ~shouldSetCookie D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\express-session\index.js:464:29
+      1  100.0%            LazyCompile: ~<anonymous> D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\express-session\index.js:220:28
+      1   50.0%        LazyCompile: ~generate D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\express-session\index.js:363:22
+      1  100.0%          LazyCompile: ~session D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\express-session\index.js:179:26
+      1  100.0%            LazyCompile: ~handle D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\express\lib\router\layer.js:86:49
+      2    1.0%      LazyCompile: ~expressInit D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\express\lib\middleware\init.js:29:30
+      2  100.0%        LazyCompile: *handle D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\express\lib\router\layer.js:86:49
+      2  100.0%          LazyCompile: *next D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\express\lib\router\index.js:176:16
+      2  100.0%            LazyCompile: ~query D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\express\lib\middleware\query.js:39:24
+      2    1.0%      LazyCompile: ~digest internal/crypto/hash.js:125:40
+      2  100.0%        LazyCompile: ~exports.sign D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\cookie-signature\index.js:16:24
+      2  100.0%          LazyCompile: ~exports.unsign D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\cookie-signature\index.js:36:26
+      2  100.0%            LazyCompile: ~unsigncookie D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\express-session\index.js:675:22
+      2    1.0%      LazyCompile: *processIncomingData D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\mongodb\lib\cmap\message_stream.js:79:29
+      2  100.0%        LazyCompile: *writeOrBuffer _stream_writable.js:334:23
+      2  100.0%          LazyCompile: *Writable.write _stream_writable.js:258:36
+      2  100.0%            LazyCompile: ~ondata _stream_readable.js:717:18
+      2    1.0%      LazyCompile: *deserializeObject D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\bson\lib\parser\deserializer.js:53:27
+      2  100.0%        LazyCompile: *deserializeObject D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\bson\lib\parser\deserializer.js:53:27
+      2  100.0%          LazyCompile: *deserializeObject D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\bson\lib\parser\deserializer.js:53:27
+      1   50.0%            LazyCompile: ~deserialize D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\bson\lib\parser\deserializer.js:24:21
+      1   50.0%            LazyCompile: *parse D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\mongodb\lib\cmap\commands.js:577:10
+      2    1.0%      LazyCompile: *FastBuffer internal/buffer.js:951:1
+      1   50.0%        LazyCompile: ~onStreamRead internal/stream_base_commons.js:165:22
+      1   50.0%        LazyCompile: ~alloc buffer.js:372:30
+      1  100.0%          LazyCompile: ~makeDocumentSegment D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\mongodb\lib\cmap\commands.js:522:24
+      1  100.0%            LazyCompile: ~toBin D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\mongodb\lib\cmap\commands.js:496:10
+      6    1.2%    LazyCompile: *writeOrBuffer _stream_writable.js:334:23
+      6  100.0%      LazyCompile: *Writable.write _stream_writable.js:258:36
+      6  100.0%        LazyCompile: ~ondata _stream_readable.js:717:18
+      6  100.0%          LazyCompile: *readableAddChunk _stream_readable.js:231:26
+      4   66.7%            LazyCompile: *write D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\mongodb\lib\cmap\connection.js:488:15
+      2   33.3%            LazyCompile: ~Readable.push _stream_readable.js:222:35
+      6    1.2%    LazyCompile: *deserializeObject D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\bson\lib\parser\deserializer.js:53:27
+      4   66.7%      LazyCompile: *deserializeObject D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\bson\lib\parser\deserializer.js:53:27
+      2   50.0%        LazyCompile: ~deserialize D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\bson\lib\parser\deserializer.js:24:21
+      2  100.0%          LazyCompile: ~deserialize D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\bson\lib\bson.js:156:21
+      2  100.0%            LazyCompile: ~parse D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\mongodb\lib\cmap\commands.js:577:10
+      2   50.0%        LazyCompile: *deserializeObject D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\bson\lib\parser\deserializer.js:53:27
+      1   50.0%          LazyCompile: ~deserialize D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\bson\lib\parser\deserializer.js:24:21
+      1  100.0%            LazyCompile: ~deserialize D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\bson\lib\bson.js:156:21
+      1   50.0%          LazyCompile: *parse D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\mongodb\lib\cmap\commands.js:577:10
+      1  100.0%            LazyCompile: ~messageHandler D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\mongodb\lib\cmap\connection.js:421:35
+      2   33.3%      LazyCompile: *parse D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\mongodb\lib\cmap\commands.js:577:10
+      1   50.0%        LazyCompile: ~messageHandler D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\mongodb\lib\cmap\connection.js:421:35
+      1  100.0%          LazyCompile: *processIncomingData D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\mongodb\lib\cmap\message_stream.js:79:29
+      1  100.0%            LazyCompile: *writeOrBuffer _stream_writable.js:334:23
+      1   50.0%        LazyCompile: *messageHandler D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\mongodb\lib\cmap\connection.js:421:35
+      1  100.0%          LazyCompile: *processIncomingData D:\Cursos\Programación\Programación Backend\Desafios\Desafio32\node_modules\mongodb\lib\cmap\message_stream.js:79:29
+      1  100.0%            LazyCompile: *writeOrBuffer _stream_writable.js:334:23
+

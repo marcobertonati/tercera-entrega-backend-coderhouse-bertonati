@@ -1,0 +1,101 @@
+
+> desafio14@1.0.0 test:info:artillery
+> artillery quick --count 50 -n 20 http://localhost:8080/info
+
+Started phase 0, duration: 1s @ 22:23:24(-0300) 2021-10-28
+Report @ 22:23:34(-0300) 2021-10-28
+Elapsed time: 10 seconds
+  Scenarios launched:  50
+  Scenarios completed: 0
+  Requests completed:  65
+  Mean response/sec: 10.12
+  Response time (msec):
+    min: 0
+    max: 7292
+    median: 2
+    p95: 6604.5
+    p99: 7290.5
+  Codes:
+    200: 65
+
+Report @ 22:23:44(-0300) 2021-10-28
+Elapsed time: 20 seconds
+  Scenarios launched:  0
+  Scenarios completed: 0
+  Requests completed:  96
+  Mean response/sec: 11.88
+  Response time (msec):
+    min: 902
+    max: 5480
+    median: 2758
+    p95: 5202.2
+    p99: 5479.1
+  Codes:
+    200: 96
+  Errors:
+    ETIMEDOUT: 9
+
+Report @ 22:23:54(-0300) 2021-10-28
+Elapsed time: 30 seconds
+  Scenarios launched:  0
+  Scenarios completed: 0
+  Requests completed:  154
+  Mean response/sec: 16.14
+  Response time (msec):
+    min: 875
+    max: 1946
+    median: 1825
+    p95: 1920.8
+    p99: 1942.8
+  Codes:
+    200: 154
+
+Report @ 22:24:04(-0300) 2021-10-28
+Elapsed time: 40 seconds
+  Scenarios launched:  0
+  Scenarios completed: 0
+  Requests completed:  193
+  Mean response/sec: 19.33
+  Response time (msec):
+    min: 192
+    max: 3253
+    median: 1047
+    p95: 3150.5
+    p99: 3232
+  Codes:
+    200: 193
+
+Report @ 22:24:11(-0300) 2021-10-28
+Elapsed time: 47 seconds
+  Scenarios launched:  0
+  Scenarios completed: 41
+  Requests completed:  330
+  Mean response/sec: 44.61
+  Response time (msec):
+    min: 188
+    max: 902
+    median: 215
+    p95: 592
+    p99: 770.6
+  Codes:
+    200: 330
+
+All virtual users finished
+Summary report @ 22:24:11(-0300) 2021-10-28
+  Scenarios launched:  50
+  Scenarios completed: 41
+  Requests completed:  838
+  Mean response/sec: 17.73
+  Response time (msec):
+    min: 0
+    max: 7292
+    median: 828
+    p95: 3700
+    p99: 6353
+  Scenario counts:
+    0: 50 (100%)
+  Codes:
+    200: 838
+  Errors:
+    ETIMEDOUT: 9
+

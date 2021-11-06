@@ -1,0 +1,131 @@
+
+> desafio14@1.0.0 test:info:artillery
+> artillery quick --count 50 -n 40 http://localhost:8080/info
+
+Started phase 0, duration: 1s @ 23:53:26(-0300) 2021-10-26
+Report @ 23:53:36(-0300) 2021-10-26
+Elapsed time: 10 seconds
+  Scenarios launched:  50
+  Scenarios completed: 0
+  Requests completed:  55
+  Mean response/sec: 10.04
+  Response time (msec):
+    min: 0
+    max: 8675
+    median: 1
+    p95: 7642.5
+    p99: 8673.7
+  Codes:
+    200: 55
+
+Report @ 23:53:46(-0300) 2021-10-26
+Elapsed time: 20 seconds
+  Scenarios launched:  0
+  Scenarios completed: 0
+  Requests completed:  77
+  Mean response/sec: 8.02
+  Response time (msec):
+    min: 2179
+    max: 8691
+    median: 4408
+    p95: 7625.3
+    p99: 8406.2
+  Codes:
+    200: 77
+  Errors:
+    ETIMEDOUT: 14
+
+Report @ 23:53:56(-0300) 2021-10-26
+Elapsed time: 30 seconds
+  Scenarios launched:  0
+  Scenarios completed: 0
+  Requests completed:  88
+  Mean response/sec: 10.81
+  Response time (msec):
+    min: 1203
+    max: 2427
+    median: 2192
+    p95: 2420.3
+    p99: 2426.6
+  Codes:
+    200: 88
+
+Report @ 23:54:06(-0300) 2021-10-26
+Elapsed time: 40 seconds
+  Scenarios launched:  0
+  Scenarios completed: 0
+  Requests completed:  132
+  Mean response/sec: 12.99
+  Response time (msec):
+    min: 1197
+    max: 2767
+    median: 1261
+    p95: 2344.4
+    p99: 2755.5
+  Codes:
+    200: 132
+
+Report @ 23:54:16(-0300) 2021-10-26
+Elapsed time: 50 seconds
+  Scenarios launched:  0
+  Scenarios completed: 0
+  Requests completed:  457
+  Mean response/sec: 52.59
+  Response time (msec):
+    min: 192
+    max: 1280
+    median: 279
+    p95: 558.7
+    p99: 1274.9
+  Codes:
+    200: 457
+
+Report @ 23:54:26(-0300) 2021-10-26
+Elapsed time: 1 minute, 0 seconds
+  Scenarios launched:  0
+  Scenarios completed: 0
+  Requests completed:  454
+  Mean response/sec: 43.83
+  Response time (msec):
+    min: 1
+    max: 944
+    median: 291.5
+    p95: 562.8
+    p99: 799
+  Codes:
+    200: 454
+
+Report @ 23:54:32(-0300) 2021-10-26
+Elapsed time: 1 minute, 6 seconds
+  Scenarios launched:  0
+  Scenarios completed: 36
+  Requests completed:  205
+  Mean response/sec: 29.35
+  Response time (msec):
+    min: 0
+    max: 1001
+    median: 688
+    p95: 809
+    p99: 972
+  Codes:
+    200: 205
+
+All virtual users finished
+Summary report @ 23:54:32(-0300) 2021-10-26
+  Scenarios launched:  50
+  Scenarios completed: 36
+  Requests completed:  1468
+  Mean response/sec: 22.09
+  Response time (msec):
+    min: 0
+    max: 8691
+    median: 340
+    p95: 2327.2
+    p99: 6567.3
+  Scenario counts:
+    0: 50 (100%)
+  Codes:
+    200: 1468
+  Errors:
+    ETIMEDOUT: 14
+
