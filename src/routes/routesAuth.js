@@ -2,8 +2,10 @@
 
 /* Requiero controladores de ruta */
 const {
-  signUp,
+  signUpLocal,
+  signUpLocalCallback,
   logIn,
+  logInCallback,
   logOut,
   logInFacebook,
   logInCallbackFacebook,
@@ -16,37 +18,21 @@ const passportFacebook = require("../auth/authPassportFacebook");
 
 module.exports = (router) => {
   router
-    // .post('/api/signup', signUp)
-    // .get('/api/login', logIn)
-    // .post('/api/logout', logOut)
-
+    /*------------------------ */
     /*Rutas para passportLocal */
-    .post(
-      "/api/signup",
-      passport.authenticate("signup-local", { failureRedirect: "/failsignup" }),
-      (req, res, next) => {
-        console.log("Usuario Creado");
-        res.redirect("/welcome");
-      }
-    )
+    // Rutas de registro
+    .post("/api/signup", signUpLocal, signUpLocalCallback)
     .get("/failsignup", (req, res, next) => {
       res.status(400).redirect("/error-signup");
     })
-
-    .post(
-      "/api/login",
-      passport.authenticate("local-login", { failureRedirect: "/faillogin" }),
-      (req, res, next) => {
-        console.log("Paso autenticación");
-        res.redirect("/welcome");
-      }
-    )
+     // Rutas de login
+    .post("/api/login", logIn, logInCallback)
     .get("/faillogin", (req, res, next) => {
       res.status(400).redirect("/error-login");
     })
 
+    /*------------------------ */
     /*Rutas para passportFacebook */
-
     .get("/auth/facebook", logInFacebook)
     .get(
       "/auth/facebook/callback",
@@ -56,8 +42,8 @@ module.exports = (router) => {
       logInCallbackFacebook
     )
 
+    /*------------------------ */
     /*Rutas para deslogueo */
-
     .post("/api/logout", logOut);
 
   return router;

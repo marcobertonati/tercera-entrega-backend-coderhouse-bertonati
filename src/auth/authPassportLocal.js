@@ -67,6 +67,7 @@ passport.use(
       //   }
       //   return done(null, user);
       // });
+      console.log("Ingresó a singup-local passport");
 
       try {
         console.log("Ingresó a authPassportLocal => Sign Up");
@@ -82,9 +83,15 @@ passport.use(
           const userToCreate = {
             name: req.body.name,
             lastname: req.body.lastname,
+            age: req.body.age,
+            number: req.body.number,
+            address: req.body.address,
             email: req.body.email,
+            avatar: req.body.avatar,
             password: createHash(req.body.password),
           };
+
+          console.log(userToCreate);
 
           await userModel.create(userToCreate);
 

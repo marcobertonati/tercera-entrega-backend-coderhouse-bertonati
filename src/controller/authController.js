@@ -4,32 +4,54 @@ const userModel = require("../dao/models/userMongoose");
 userModel;
 
 const mailingService = require("../services/mailingService");
-
+const passportLocal = require("../auth/authPassportLocal");
 const passportFacebook = require("../auth/authPassportFacebook");
 
-exports.signUp = async (req, res, next) => {
-  const userName = req.body.username;
-  if (!userName) throw new Error("No es posible registrarse");
-  req.session.user = { username: userName };
-  res.cookie("isRegistered", `${req.session.user.username}`, { maxAge: 60000 });
+/*Controlador de Local-Passport */
+exports.signUpLocal = passportLocal.authenticate("signup-local", {
+  failureRedirect: "/failsignup",
+});
+
+exports.signUpLocalCallback = async (req, res, next) => {
+  const date = new Date().toLocaleDateString();
+  const time = new Date().toLocaleTimeString();
+  const mailOptions = {
+    from: "Servidor de Node.js",
+    to: ["df2euol6wwi5u2ix@ethereal.email", process.env.GMAIL_USER],
+    subject: `Nuevo usuario registrado: ${req.body.email} @ ${date} a las ${time}`,
+    html: `El usuario ${req.body.email} se ha registrado el día ${date} a las ${time}. 
+    Datos ingresados:
+    - nombre ${req.body.name}
+    - apellido ${req.body.lastname}
+    - edad ${req.body.age}
+    - número de contacto ${req.body.number}
+    - dirección ${req.body.address}
+    - email ${req.body.email}
+    - avatar ${req.body.avatar}`,
+
+    // attachments: [
+    //   {
+    //     // filename and content type is derived from path
+    //     path: req.session.passport.user.photo,
+    //   },
+    // ],
+  };
+  mailingService.mailingEthereal(mailOptions);
+  mailingService.mailingGmail(mailOptions);
+
   res.redirect("/welcome");
 };
 
-exports.logIn = async (req, res, next) => {
-  // const userName = req.body.username;
-  // if (!userName) throw new Error ('No es posible iniciar sesion')
-  // if(req.session.user.username == userName) {
-  //   res.json('Te has autenticado con éxito!')
-  // } else {
-  //   res.json('No te has podido autenticar')
-  // }
-  console.log("Entro a AuthControllers");
+exports.logIn = passportLocal.authenticate("local-login", {
+  failureRedirect: "/faillogin",
+});
 
-  const users = userModel.find();
-  console.log(users);
-  res.json(users);
+exports.logInCallback = async (req, res, next) => {
+  res.redirect("/welcome");
 };
 
+
+/*Controlador de Logeo de FACEBOOK */
 exports.logInFacebook = async (req, res, next) => {
   passportFacebook.authenticate("facebook");
   res.redirect("/auth/facebook/callback");
@@ -55,6 +77,8 @@ exports.logInCallbackFacebook = async (req, res, next) => {
   res.redirect("/welcome");
 };
 
+
+/*Controlador de deslogeo */
 exports.logOut = async (req, res, next) => {
   const date = new Date().toLocaleDateString();
   const time = new Date().toLocaleTimeString();
