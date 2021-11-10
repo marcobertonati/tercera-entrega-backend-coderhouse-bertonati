@@ -12,6 +12,7 @@
               <th scope="col">Nombre</th>
               <th scope="col">Precio</th>
               <th scope="col">Icono/Imagen</th>
+              <th scope="col">Cantidad a agregar</th>
             </tr>
           </thead>
 
@@ -21,8 +22,9 @@
                 <td>{{this._id}}</td>
                 <td>{{this.title}}</td>
                 <td>{{this.price}}</td>
-                <td><img src="" alt="Imagen de {{this.title}}" srcset="{{this.thumbnail}}"></td>
+                <td><img class="img-fluid" src="" alt="Imagen de {{this.title}}" srcset="{{this.thumbnail}}"></td>
                 <!--Imágenes desde https://www.iconfinder.com/iconsets/clothes-outfit-line-shop-aholic-->
+                <td>                <button class='btn btn-primary btn-add' onClick="addQuantity({{this.title}})">+ </button> <span class='quantity-product'>0</span><button class='btn btn-primary btn-rest'>- </button></td>
               </tr>
             {{/each}}
 
