@@ -1,27 +1,47 @@
 console.log("Session Cart working!");
 
-function addQuantity(elementToAdd) {
-  console.log(elementToAdd);
+function addQuantity(id) {
+  let quantity = document.getElementById(id);
+  let quantityNumber = Number(quantity.textContent);
+  let value = quantityNumber + 1;
+  quantity.textContent = value;
 }
 
-function restQuantity(elementToAdd) {
-  alert("hola!");
+function restQuantity(id) {
+  let quantity = document.getElementById(id);
+  let quantityNumber = Number(quantity.textContent);
+  if (quantityNumber <= 0) {
+    quantity.textContent = 0;
+  } else {
+    let value = quantityNumber - 1;
+    quantity.textContent = value;
+  }
 }
 
-const addButtonNodeList = document.querySelectorAll(".btn-add");
-const addButton = Array.apply(null, addButtonNodeList);
-addButton.forEach((element) => {
-  element.addEventListener("click", addQuantity);
-});
+function buyProducts() {
+  const listOfProducts = [];
+  const nodeListOfProducts = document.querySelectorAll(".quantity-product");
+  const arrayOfProducts = Array.from(nodeListOfProducts);
 
-const restButtonNodeLis = document.querySelectorAll(".btn-rest");
-const restButton = Array.apply(null, restButtonNodeLis);
-restButton.forEach((element) => {
-  element.addEventListener("click", restQuantity);
-});
+  arrayOfProducts.forEach((product) => {
+    if (Number(product.textContent) > 0) {
+      listOfProducts.push({
+        id: product.id,
+        quantity: Number(product.textContent),
+      });
+    }
+  });
 
-const quantityProductNodeList = document.querySelectorAll(".quantity-product");
-const quantityProduct = Array.apply(null, quantityProductNodeList);
+  fetch("http://localhost:8080/api/cart/post-session", {
+    method: "POST",
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(listOfProducts),
+  });
+}
 
-// console.log(addButton);
-// console.log(restButton);
+// fetch('http://localhost:8080/test', {
+//   method: POST,
+//   body:
+// })

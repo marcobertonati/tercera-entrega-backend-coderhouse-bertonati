@@ -1,5 +1,7 @@
 module.exports = class {
   addProductsToSession = (cart, session) => {
+    console.log(cart);
+    console.log(session);
     if (!session.cartSession) {
       session.cartSession = cart;
       return session.cartSession;

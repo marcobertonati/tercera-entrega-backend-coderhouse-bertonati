@@ -1,26 +1,53 @@
 const CartService = require("../services/cartService");
+const ProductService = require("../services/productService");
 const cart = new CartService();
+const product = new ProductService();
 
 const CartSessionService = require("../services/cartSession");
 const cartSession = new CartSessionService();
 
+const mailingService = require("../services/mailingService");
+const createHtml = require("../utils/ticketHTML");
+
+const whatsAppTwilio = require("../services/twilio.whatsapp");
+
 exports.postCartSession = async (req, res, next) => {
-  console.log(req.body);
   const response = cartSession.addProductsToSession(req.body, req.session);
   res.json(response);
 };
 
 exports.getCartSession = async (req, res, next) => {
   const response = cartSession.getProductsFromSession(req.session.cartSession);
-  res.json(response);
+  // res.json(response);
+  res.render("./pages/checkout-cart", { response });
 };
 
 exports.createCart = async (req, res, next) => {
   console.log("Entró a cartController => createCart");
   try {
-    // const cartBody = req.body;
     const cartBody = req.session.cartSession;
-    const cartCreated = await cart.createCart(cartBody);
+    const finalCart = {
+      productsOnCart: [],
+    };
+
+    for (i = 0; i < cartBody.length; i++) {
+      let productFinded = await product.getProduct(cartBody[i].id);
+      finalCart.productsOnCart.push({
+        product: productFinded,
+        quantity: cartBody[i].quantity,
+      });
+    }
+    const cartCreated = await cart.createCart(finalCart);
+    const emailBody = createHtml.createHtml(cartCreated);
+
+    mailingService.mailingGmail({
+      from: "Servidor de Node.js",
+      to: ["df2euol6wwi5u2ix@ethereal.email", process.env.GMAIL_USER],
+      subject: `Nuevo pedido de: ${req.session.passport.user.name} @ mail: ${req.session.passport.user.email}`,
+      html: emailBody,
+    });
+    whatsAppTwilio(emailBody, req.session.passport.user.number);
+
     res.json(cartCreated);
   } catch (error) {
     console.log(error);

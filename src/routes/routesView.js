@@ -16,13 +16,13 @@ module.exports = (router) => {
     .get("/", checkAuthentication, (req, res, next) => {
       res.render("./pages/login");
     })
-    .get("/productos/vista", productController.findAll)
+    .get("/productos/vista", checkAuthentication, productController.findAll)
 
     .get("/productos/agregar", (req, res, next) => {
       res.render("./pages/agregar");
     })
 
-    .get("/chat-view", chatController.getAllMsgChat)
+    .get("/chat-view", checkAuthentication, chatController.getAllMsgChat)
 
     .get("/login", (req, res, next) => {
       res.render("./pages/login");

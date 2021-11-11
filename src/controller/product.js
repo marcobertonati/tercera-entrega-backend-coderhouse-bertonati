@@ -52,8 +52,11 @@ exports.findAll = async (req, res, next) => {
   try {
     const products = await product.getAllProducts();
     // loggerDefault.info(products);
+
+    //Para SSR
     res.render("./pages/lista", {products});
-    // res.json(allProducts);
+    //Para RacT
+    // res.json(products);
   } catch (error) {
     loggerError.error(error);
     res.json(error);

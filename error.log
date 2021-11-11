@@ -1,0 +1,15 @@
+[2021-11-10T18:20:31.857] [ERROR] myError - ReferenceError: allProducts is not defined
+    at exports.findAll (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\src\controller\product.js:59:14)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+[2021-11-10T18:21:03.624] [ERROR] myError - ReferenceError: allProducts is not defined
+    at exports.findAll (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\src\controller\product.js:59:14)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+[2021-11-10T18:21:47.869] [ERROR] myError - ReferenceError: allProducts is not defined
+    at exports.findAll (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\src\controller\product.js:59:14)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+[2021-11-10T18:21:52.851] [ERROR] myError - ReferenceError: allProducts is not defined
+    at exports.findAll (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\src\controller\product.js:59:14)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+[2021-11-10T18:22:18.636] [ERROR] myError - ReferenceError: allProducts is not defined
+    at exports.findAll (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\src\controller\product.js:59:14)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)

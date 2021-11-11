@@ -22,12 +22,14 @@
                 <td>{{this._id}}</td>
                 <td>{{this.title}}</td>
                 <td>{{this.price}}</td>
-                <td><img class="img-fluid" src="" alt="Imagen de {{this.title}}" srcset="{{this.thumbnail}}"></td>
+                <td><img class="img-fluid" width="100px" src="" alt="Imagen de {{this.title}}" srcset="{{this.thumbnail}}"></td>
                 <!--Imágenes desde https://www.iconfinder.com/iconsets/clothes-outfit-line-shop-aholic-->
-                <td>                <button class='btn btn-primary btn-add' onClick="addQuantity({{this.title}})">+ </button> <span class='quantity-product'>0</span><button class='btn btn-primary btn-rest'>- </button></td>
+                <td>                <button class='btn btn-primary btn-add' onclick="addQuantity('{{this._id}}')">+ </button> <span id={{this._id}} class='quantity-product'>0</span><button class='btn btn-primary btn-rest' onclick="restQuantity('{{this._id}}')">- </button></td>
               </tr>
             {{/each}}
 
           </tbody>
         </table>
       {{/if}}
+
+      <button onclick="buyProducts()"> Agregar al carrito </button>
