@@ -4,16 +4,26 @@ const express = require("express");
 const app = express();
 /*Le pasamos la constante app que creamos arriba */
 const http = require("http").Server(app);
+
+
 /*Le pasamos la constante http */
 const io = require("socket.io")(http);
+
+
 /*Cargo módulo Handlebars */
 const handlebars = require("express-handlebars");
+
+
 /*Requiero cors */
 const cors = require("cors");
 app.use(cors());
+
+
 /*Requiero compression*/
 const compression = require("compression");
 app.use(compression());
+
+
 /*Requiero Multer*/
 const multer = require("multer");
 const storageMulter = multer.diskStorage({
@@ -39,7 +49,7 @@ const cookieParser = require("cookie-parser");
 const MongoStore = require("connect-mongo");
 /*Configuración para Mongo Atlas */
 const advancedOptions = { useNewUrlParser: true, useUnifiedTopology: true };
-
+/*Establecemos que la sessión se guarde en MongoStore */
 app.use(
   session({
     store: MongoStore.create({
@@ -56,18 +66,13 @@ app.use(
     },
   })
 );
-
 app.use(cookieParser());
+
 
 /*Middleware Passport: SIEMPRE VAN ANTES QUE LAS RUTAS */
 app.use(passport.initialize());
 app.use(passport.session());
 
-/*Middle para saber que viene de passport */
-// app.use((req,res,next)=> {
-//   console.log(req.session.passport);
-//   next();
-// })
 
 /*Router */
 /*Requerimos las rutas que va a ofrecer nuestra aplicación */
@@ -97,7 +102,7 @@ const bodyParser = require("body-parser");
 // /*Uso de Middlewares*/
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
-// app.use(express.json());
+// app.use(express.json()); // Por algun motivo extraño el express.json() no me estaría funcionando
 
 /*Configuración del motor de plantilla*/
 app.engine(
@@ -118,10 +123,9 @@ app.set("views", "./views");
 http://localhost:8080/static/css/style.css
 http://localhost:8080/static/js/index.js
 */
-// app.use(express.static(__dirname + '/public'))
+// Utilizamos el prefijo virtual '/static'
 app.use("/static", express.static(__dirname + "/public"));
 
-/*Este trabajo funciona con REACTJS: https://github.com/marcobertonati/frontend-react-ecommerceunique/tree/main/src */
 
 /*Rutas del API: Productos*/
 app.use(routesProducts(routerProducts));
