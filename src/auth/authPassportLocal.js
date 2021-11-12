@@ -87,7 +87,7 @@ passport.use(
             number: req.body.number,
             address: req.body.address,
             email: req.body.email,
-            avatar: req.body.avatar,
+            avatar: `/static/avatar/${req.file.filename}`,
             password: createHash(req.body.password),
           };
 

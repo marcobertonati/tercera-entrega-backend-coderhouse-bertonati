@@ -11,9 +11,11 @@ const createHtml = require("../utils/ticketHTML");
 
 const whatsAppTwilio = require("../services/twilio.whatsapp");
 
+const smsTwilio = require("../sms/twilio");
+
 exports.postCartSession = async (req, res, next) => {
   const response = cartSession.addProductsToSession(req.body, req.session);
-  res.json(response);
+  res.redirect("/api/cart/get-session");
 };
 
 exports.getCartSession = async (req, res, next) => {
@@ -38,15 +40,21 @@ exports.createCart = async (req, res, next) => {
       });
     }
     const cartCreated = await cart.createCart(finalCart);
+    const emailSubject = `Nuevo pedido de: ${req.session.passport.user.name} @ mail: ${req.session.passport.user.email}`;
     const emailBody = createHtml.createHtml(cartCreated);
 
     mailingService.mailingGmail({
       from: "Servidor de Node.js",
       to: ["df2euol6wwi5u2ix@ethereal.email", process.env.GMAIL_USER],
-      subject: `Nuevo pedido de: ${req.session.passport.user.name} @ mail: ${req.session.passport.user.email}`,
+      subject: emailSubject,
       html: emailBody,
     });
-    whatsAppTwilio(emailBody, req.session.passport.user.number);
+    console.log(req.session.passport.user.number);
+    whatsAppTwilio(emailSubject, req.session.passport.user.number);
+    smsTwilio(
+      req.session.passport.user.number,
+      "Hemos recibido su pedido  y se encuentra en proceso"
+    );
 
     res.json(cartCreated);
   } catch (error) {

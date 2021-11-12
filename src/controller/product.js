@@ -37,9 +37,9 @@ exports.createProduct = async (req, res, next) => {
   try {
     loggerTrace.trace("Ingresó al try");
     const productCreated = await product.createProduct(req.body);
-    res.json({ msg: "Product Created!", product: productCreated });
+    // res.json({ msg: "Product Created!", product: productCreated });
     // res.render('./pages/agregar')
-    // res.redirect('/productos/agregar');
+    res.redirect("/productos/agregar");
   } catch (error) {
     loggerTrace.trace("Ingresó al catch");
     loggerError.error(error);
@@ -54,7 +54,7 @@ exports.findAll = async (req, res, next) => {
     // loggerDefault.info(products);
 
     //Para SSR
-    res.render("./pages/lista", {products});
+    res.render("./pages/lista", { products });
     //Para RacT
     // res.json(products);
   } catch (error) {
@@ -142,8 +142,11 @@ exports.getByPrice = async (req, res, next) => {
   loggerTrace.trace("Ingreso a getOneByPrice");
 
   try {
-    const pricemin = parseInt(req.query.pricemin);
-    const pricemax = parseInt(req.query.pricemax);
+    // const pricemin = parseInt(req.query.pricemin);
+    // const pricemax = parseInt(req.query.pricemax);
+
+    const pricemin = parseInt(req.body.minvalue);
+    const pricemax = parseInt(req.body.maxvalue);
     loggerDefault.info(
       `El usuario quiere productos entre precio: ${pricemin} y ${pricemax}`
     );
@@ -152,7 +155,8 @@ exports.getByPrice = async (req, res, next) => {
       pricemin,
       pricemax
     );
-    res.json(productsRetrieved);
+    // res.json(productsRetrieved);
+    res.render("./pages/products-finded", { productsRetrieved });
   } catch (error) {
     loggerError.error(error);
     res.json(error);

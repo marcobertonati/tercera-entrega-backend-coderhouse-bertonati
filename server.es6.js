@@ -14,6 +14,20 @@ app.use(cors());
 /*Requiero compression*/
 const compression = require("compression");
 app.use(compression());
+/*Requiero Multer*/
+const multer = require("multer");
+const storageMulter = multer.diskStorage({
+  destination: "public/avatar",
+  filename: (req, file, cb) => {
+    cb(null, file.originalname);
+  },
+});
+app.use(
+  multer({
+    storage: storageMulter,
+    dest: "public/avatar",
+  }).single("avatar")
+);
 
 /*Requiero passport */
 const passport = require("passport");
@@ -128,7 +142,7 @@ app.use(routesRandom(routerRandom));
 
 /*Socket.io: Chat */
 /*Requiero la funcion socketIo que lo que contiene adentro es toda la conexión IO. Le paso por parametro el io que es basicamente la que establece la conexión. */
-const socketConnection = require ('./src/services/messagesIOchat');
+const socketConnection = require("./src/services/messagesIOchat");
 socketConnection(io);
 
 /*Exportamos servidor */

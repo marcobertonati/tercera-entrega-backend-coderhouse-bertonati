@@ -18,7 +18,7 @@ function restQuantity(id) {
   }
 }
 
-function buyProducts() {
+function addProducts() {
   const listOfProducts = [];
   const nodeListOfProducts = document.querySelectorAll(".quantity-product");
   const arrayOfProducts = Array.from(nodeListOfProducts);
@@ -32,13 +32,16 @@ function buyProducts() {
     }
   });
 
-  fetch("http://localhost:8080/api/cart/post-session", {
+  fetch("/api/cart/post-session", {
     method: "POST",
     headers: {
-      'Content-Type': 'application/json'
+      "Content-Type": "application/json",
     },
     body: JSON.stringify(listOfProducts),
+    // redirect: "manual",
   });
+
+  // location.href = "/carrito/vista";
 }
 
 // fetch('http://localhost:8080/test', {
