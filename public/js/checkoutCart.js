@@ -1,8 +1,13 @@
 console.log("Chcekout Cart Working!");
 
 function buyCart() {
-  alert("Comprar el carrito!");
+  alert("¡Pedido realizado!");
   fetch("/api/cart/create", {
-      method: 'POST'
-  });
+    method: "POST",
+  })
+    .then((data) => {
+      console.log(data);
+      location.replace("/purchase-completed");
+    })
+    .catch((e) => console.log(e));
 }

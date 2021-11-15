@@ -1,18 +1,14 @@
 const ProductService = require("../services/productService");
 const product = new ProductService();
 
-// const log4js = require("../logger/log4js");
-// const loggerError = log4js.getLogger("myError");
-// const loggerWarn = log4js.getLogger("myWarn");
-// const loggerDefault = log4js.getLogger();
-// const loggerTrace = log4js.getLogger("myTrace");
-
 const {
   loggerWarn,
   loggerTrace,
   loggerDefault,
   loggerError,
 } = require("../logger/log4js");
+
+/*-----CONTROLADOR DE PRODUCTOS---------*/
 
 exports.createProduct = async (req, res, next) => {
   loggerTrace.trace("Ingresó a createProduct");
@@ -51,11 +47,11 @@ exports.findAll = async (req, res, next) => {
   loggerTrace.trace("Ingresó a findAll");
   try {
     const products = await product.getAllProducts();
-    // loggerDefault.info(products);
 
     //Para SSR
     res.render("./pages/lista", { products });
-    //Para RacT
+
+    //Para ReactJS
     // res.json(products);
   } catch (error) {
     loggerError.error(error);
@@ -139,12 +135,7 @@ exports.getByCode = async (req, res, next) => {
 };
 
 exports.getByPrice = async (req, res, next) => {
-  loggerTrace.trace("Ingreso a getOneByPrice");
-
   try {
-    // const pricemin = parseInt(req.query.pricemin);
-    // const pricemax = parseInt(req.query.pricemax);
-
     const pricemin = parseInt(req.body.minvalue);
     const pricemax = parseInt(req.body.maxvalue);
     loggerDefault.info(
@@ -155,8 +146,10 @@ exports.getByPrice = async (req, res, next) => {
       pricemin,
       pricemax
     );
-    // res.json(productsRetrieved);
+    /*ACA ESTÁ EL PROBLEMA. Porque si pongo render me renderiza la página pero con un URL de /API/blahblah */
+    console.log("Renderizará la página");
     res.render("./pages/products-finded", { productsRetrieved });
+    // res.redirect("/welcome");
   } catch (error) {
     loggerError.error(error);
     res.json(error);

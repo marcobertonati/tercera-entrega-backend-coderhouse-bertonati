@@ -43,20 +43,21 @@ exports.createCart = async (req, res, next) => {
     const emailSubject = `Nuevo pedido de: ${req.session.passport.user.name} @ mail: ${req.session.passport.user.email}`;
     const emailBody = createHtml.createHtml(cartCreated);
 
-    mailingService.mailingGmail({
+    await mailingService.mailingGmail({
       from: "Servidor de Node.js",
       to: ["df2euol6wwi5u2ix@ethereal.email", process.env.GMAIL_USER],
       subject: emailSubject,
       html: emailBody,
     });
-    console.log(req.session.passport.user.number);
-    whatsAppTwilio(emailSubject, req.session.passport.user.number);
-    smsTwilio(
+    await whatsAppTwilio(emailSubject, req.session.passport.user.number);
+    await smsTwilio(
       req.session.passport.user.number,
       "Hemos recibido su pedido  y se encuentra en proceso"
     );
 
-    res.json(cartCreated);
+    delete req.session.cartSession;
+
+    res.render("./pages/welcome");
   } catch (error) {
     console.log(error);
     res.json(error);

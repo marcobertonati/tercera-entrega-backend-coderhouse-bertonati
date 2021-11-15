@@ -28,7 +28,8 @@ exports.signUpLocalCallback = async (req, res, next) => {
     - dirección ${req.body.address}
     - email ${req.body.email}
     - avatar ${req.body.avatar}`,
-
+    
+    // Sirve para agregar archivos adjuntos
     // attachments: [
     //   {
     //     // filename and content type is derived from path

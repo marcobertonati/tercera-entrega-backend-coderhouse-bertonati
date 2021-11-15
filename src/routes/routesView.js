@@ -15,7 +15,7 @@ const chatController = require("../controller/messagesChat");
 const cartController = require("../controller/cartController");
 
 /*Controlador signup*/
-const signUpController = require('../controller/signupController')
+const signUpController = require("../controller/signupController");
 
 module.exports = (router) => {
   router
@@ -36,6 +36,9 @@ module.exports = (router) => {
 
     /*Vistas de carrito */
     .get("/carrito/vista", cartController.getCartSession)
+    .get("/purchase-completed", (req, res, next) => {
+      res.render("./pages/purchase-completed");
+    })
 
     /*Vistas de chat */
     .get("/chat-view", checkAuthentication, chatController.getAllMsgChat)

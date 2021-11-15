@@ -19,8 +19,6 @@ module.exports = class {
   }
 
   async getAllProducts() {
-    console.log("Ingresó a productService => getAllProducts");
-    console.log(productJS.showProducts());
     return await productModel.find().lean();
   }
 
@@ -52,7 +50,6 @@ module.exports = class {
   }
 
   async getProductByPrice(pricemin, pricemax) {
-    console.log("Ingresó a productService => getProductByPrice");
     return await productModel
       .find({
         $and: [{ price: { $gte: pricemin } }, { price: { $lte: pricemax } }],

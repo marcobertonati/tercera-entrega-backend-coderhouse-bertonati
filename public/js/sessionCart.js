@@ -39,6 +39,8 @@ function addProducts() {
     },
     body: JSON.stringify(listOfProducts),
     // redirect: "manual",
+  }).then((data) => {
+    location.replace("/carrito/vista");
   });
 
   // location.href = "/carrito/vista";

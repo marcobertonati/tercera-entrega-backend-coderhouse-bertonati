@@ -11,9 +11,7 @@ const {
   logInCallbackFacebook,
 } = require("../controller/authController");
 
-// const passport = require("passport");
-const passport = require("../auth/authPassportLocal");
-
+/*Requiero el controlador de autenticación por si la persona quiere loguearse vía Facebook: Funcionalidad pausada ya que estamos manejando vía PassportLocal */
 const passportFacebook = require("../auth/authPassportFacebook");
 
 module.exports = (router) => {
@@ -25,14 +23,14 @@ module.exports = (router) => {
     .get("/failsignup", (req, res, next) => {
       res.status(400).redirect("/error-signup");
     })
-     // Rutas de login
+    // Rutas de login
     .post("/api/login", logIn, logInCallback)
     .get("/faillogin", (req, res, next) => {
       res.status(400).redirect("/error-login");
     })
 
     /*------------------------ */
-    /*Rutas para passportFacebook */
+    /*Rutas para passportFacebook: Funcionalidad pausada ya que estamos usando Passport Local */
     .get("/auth/facebook", logInFacebook)
     .get(
       "/auth/facebook/callback",
