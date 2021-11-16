@@ -40,7 +40,7 @@ exports.signUpLocalCallback = async (req, res, next) => {
   mailingService.mailingEthereal(mailOptions);
   mailingService.mailingGmail(mailOptions);
 
-  res.redirect("/welcome");
+  res.redirect("/login");
 };
 
 exports.logIn = passportLocal.authenticate("local-login", {
