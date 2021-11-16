@@ -137,7 +137,7 @@ exports.getByCode = async (req, res, next) => {
 exports.getByPrice = async (req, res, next) => {
   try {
     loggerDefault.info(
-      `El usuario quiere productos entre precio: ${pricemin} y ${pricemax}`
+      `El usuario quiere productos entre precio: ${req.query.minvalue} y ${req.query.maxvalue}`
     );
 
     if (req.query.minvalue === undefined || req.query.maxvalue === undefined) {

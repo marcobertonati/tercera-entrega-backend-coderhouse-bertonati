@@ -36,6 +36,8 @@ passport.use(
           );
         }
 
+        console.log(userFinded);
+
         return done(null, userFinded);
       } catch (error) {
         console.log(error);

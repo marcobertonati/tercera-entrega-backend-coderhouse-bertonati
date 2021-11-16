@@ -847,3 +847,36 @@
   },
   valueType: 'number'
 }
+[2021-11-15T23:21:55.979] [ERROR] myError - ReferenceError: pricemin is not defined
+    at exports.getByPrice (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\src\controller\product.js:140:52)
+    at Layer.handle [as handle_request] (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\express\lib\router\route.js:137:13)
+    at exports.checkAuthentication (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\src\auth\checkAuth.js:3:7)
+    at Layer.handle [as handle_request] (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\express\lib\router\layer.js:95:5)
+    at D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\express\lib\router\index.js:335:12)
+[2021-11-15T23:21:59.882] [ERROR] myError - ReferenceError: pricemin is not defined
+    at exports.getByPrice (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\src\controller\product.js:140:52)
+    at Layer.handle [as handle_request] (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\express\lib\router\route.js:137:13)
+    at exports.checkAuthentication (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\src\auth\checkAuth.js:3:7)
+    at Layer.handle [as handle_request] (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\express\lib\router\layer.js:95:5)
+    at D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\express\lib\router\index.js:335:12)
+[2021-11-15T23:22:06.615] [ERROR] myError - ReferenceError: pricemin is not defined
+    at exports.getByPrice (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\src\controller\product.js:140:52)
+    at Layer.handle [as handle_request] (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\express\lib\router\route.js:137:13)
+    at exports.checkAuthentication (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\src\auth\checkAuth.js:3:7)
+    at Layer.handle [as handle_request] (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\express\lib\router\layer.js:95:5)
+    at D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\express\lib\router\index.js:335:12)
