@@ -140,6 +140,8 @@ exports.getByPrice = async (req, res, next) => {
       `El usuario quiere productos entre precio: ${req.query.minvalue} y ${req.query.maxvalue}`
     );
 
+    loggerDefault.info(req.query);
+
     if (req.query.minvalue === undefined || req.query.maxvalue === undefined) {
       res.render("./pages/search-products");
     } else {
