@@ -123,3 +123,727 @@
       at model.Query.Query._castConditions (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:2058:10),
   valueType: 'string'
 }
+[2021-11-15T21:28:13.073] [ERROR] myError - CastError: Cast to Number failed for value "NaN" (type number) at path "price" for model "Product"
+    at model.Query.exec (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:4543:21)
+    at model.Query.Query.then (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:4642:15)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5) {
+  messageFormat: undefined,
+  stringValue: '"NaN"',
+  kind: 'Number',
+  value: NaN,
+  path: 'price',
+  reason: AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert.ok(!isNaN(val))
+  
+      at castNumber (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\cast\number.js:28:10)
+      at SchemaNumber.cast (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\schema\number.js:371:12)
+      at SchemaNumber.handleSingle (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\schema\number.js:382:15)
+      at SchemaNumber.castForQuery (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\schema\number.js:423:20)
+      at SchemaNumber.SchemaType.castForQueryWrapper (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\schematype.js:1510:22)
+      at cast (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\cast.js:312:39)
+      at cast (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\cast.js:75:18)
+      at model.Query.Query.cast (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:4966:12)
+      at model.Query.Query._castConditions (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:2058:10)
+      at model.Query.<anonymous> (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:2085:8) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '=='
+  },
+  valueType: 'number'
+}
+[2021-11-15T21:29:29.962] [ERROR] myError - ReferenceError: priceminx is not defined
+    at exports.getByPrice (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\src\controller\product.js:145:28)
+    at Layer.handle [as handle_request] (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\express\lib\router\layer.js:95:5)
+    at next (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\express\lib\router\layer.js:95:5)
+    at D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\express\lib\router\index.js:335:12)
+    at next (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\express\lib\router\index.js:174:3)
+    at router (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\express\lib\router\index.js:47:12)
+[2021-11-15T21:30:00.343] [ERROR] myError - CastError: Cast to Number failed for value "NaN" (type number) at path "price" for model "Product"
+    at model.Query.exec (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:4543:21)
+    at model.Query.Query.then (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:4642:15)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5) {
+  messageFormat: undefined,
+  stringValue: '"NaN"',
+  kind: 'Number',
+  value: NaN,
+  path: 'price',
+  reason: AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert.ok(!isNaN(val))
+  
+      at castNumber (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\cast\number.js:28:10)
+      at SchemaNumber.cast (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\schema\number.js:371:12)
+      at SchemaNumber.handleSingle (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\schema\number.js:382:15)
+      at SchemaNumber.castForQuery (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\schema\number.js:423:20)
+      at SchemaNumber.SchemaType.castForQueryWrapper (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\schematype.js:1510:22)
+      at cast (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\cast.js:312:39)
+      at cast (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\cast.js:75:18)
+      at model.Query.Query.cast (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:4966:12)
+      at model.Query.Query._castConditions (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:2058:10)
+      at model.Query.<anonymous> (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:2085:8) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '=='
+  },
+  valueType: 'number'
+}
+[2021-11-15T21:30:31.238] [ERROR] myError - CastError: Cast to Number failed for value "NaN" (type number) at path "price" for model "Product"
+    at model.Query.exec (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:4543:21)
+    at model.Query.Query.then (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:4642:15)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5) {
+  messageFormat: undefined,
+  stringValue: '"NaN"',
+  kind: 'Number',
+  value: NaN,
+  path: 'price',
+  reason: AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert.ok(!isNaN(val))
+  
+      at castNumber (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\cast\number.js:28:10)
+      at SchemaNumber.cast (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\schema\number.js:371:12)
+      at SchemaNumber.handleSingle (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\schema\number.js:382:15)
+      at SchemaNumber.castForQuery (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\schema\number.js:423:20)
+      at SchemaNumber.SchemaType.castForQueryWrapper (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\schematype.js:1510:22)
+      at cast (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\cast.js:312:39)
+      at cast (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\cast.js:75:18)
+      at model.Query.Query.cast (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:4966:12)
+      at model.Query.Query._castConditions (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:2058:10)
+      at model.Query.<anonymous> (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:2085:8) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '=='
+  },
+  valueType: 'number'
+}
+[2021-11-15T21:32:15.359] [ERROR] myError - CastError: Cast to Number failed for value "NaN" (type number) at path "price" for model "Product"
+    at model.Query.exec (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:4543:21)
+    at model.Query.Query.then (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:4642:15)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5) {
+  messageFormat: undefined,
+  stringValue: '"NaN"',
+  kind: 'Number',
+  value: NaN,
+  path: 'price',
+  reason: AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert.ok(!isNaN(val))
+  
+      at castNumber (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\cast\number.js:28:10)
+      at SchemaNumber.cast (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\schema\number.js:371:12)
+      at SchemaNumber.handleSingle (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\schema\number.js:382:15)
+      at SchemaNumber.castForQuery (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\schema\number.js:423:20)
+      at SchemaNumber.SchemaType.castForQueryWrapper (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\schematype.js:1510:22)
+      at cast (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\cast.js:312:39)
+      at cast (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\cast.js:75:18)
+      at model.Query.Query.cast (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:4966:12)
+      at model.Query.Query._castConditions (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:2058:10)
+      at model.Query.<anonymous> (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:2085:8) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '=='
+  },
+  valueType: 'number'
+}
+[2021-11-15T21:32:25.258] [ERROR] myError - CastError: Cast to Number failed for value "NaN" (type number) at path "price" for model "Product"
+    at model.Query.exec (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:4543:21)
+    at model.Query.Query.then (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:4642:15)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5) {
+  messageFormat: undefined,
+  stringValue: '"NaN"',
+  kind: 'Number',
+  value: NaN,
+  path: 'price',
+  reason: AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert.ok(!isNaN(val))
+  
+      at castNumber (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\cast\number.js:28:10)
+      at SchemaNumber.cast (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\schema\number.js:371:12)
+      at SchemaNumber.handleSingle (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\schema\number.js:382:15)
+      at SchemaNumber.castForQuery (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\schema\number.js:423:20)
+      at SchemaNumber.SchemaType.castForQueryWrapper (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\schematype.js:1510:22)
+      at cast (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\cast.js:312:39)
+      at cast (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\cast.js:75:18)
+      at model.Query.Query.cast (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:4966:12)
+      at model.Query.Query._castConditions (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:2058:10)
+      at model.Query.<anonymous> (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:2085:8) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '=='
+  },
+  valueType: 'number'
+}
+[2021-11-15T21:32:57.269] [ERROR] myError - CastError: Cast to Number failed for value "NaN" (type number) at path "price" for model "Product"
+    at model.Query.exec (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:4543:21)
+    at model.Query.Query.then (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:4642:15)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5) {
+  messageFormat: undefined,
+  stringValue: '"NaN"',
+  kind: 'Number',
+  value: NaN,
+  path: 'price',
+  reason: AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert.ok(!isNaN(val))
+  
+      at castNumber (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\cast\number.js:28:10)
+      at SchemaNumber.cast (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\schema\number.js:371:12)
+      at SchemaNumber.handleSingle (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\schema\number.js:382:15)
+      at SchemaNumber.castForQuery (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\schema\number.js:423:20)
+      at SchemaNumber.SchemaType.castForQueryWrapper (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\schematype.js:1510:22)
+      at cast (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\cast.js:312:39)
+      at cast (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\cast.js:75:18)
+      at model.Query.Query.cast (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:4966:12)
+      at model.Query.Query._castConditions (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:2058:10)
+      at model.Query.<anonymous> (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:2085:8) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '=='
+  },
+  valueType: 'number'
+}
+[2021-11-15T21:33:01.609] [ERROR] myError - CastError: Cast to Number failed for value "NaN" (type number) at path "price" for model "Product"
+    at model.Query.exec (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:4543:21)
+    at model.Query.Query.then (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:4642:15)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5) {
+  messageFormat: undefined,
+  stringValue: '"NaN"',
+  kind: 'Number',
+  value: NaN,
+  path: 'price',
+  reason: AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert.ok(!isNaN(val))
+  
+      at castNumber (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\cast\number.js:28:10)
+      at SchemaNumber.cast (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\schema\number.js:371:12)
+      at SchemaNumber.handleSingle (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\schema\number.js:382:15)
+      at SchemaNumber.castForQuery (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\schema\number.js:423:20)
+      at SchemaNumber.SchemaType.castForQueryWrapper (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\schematype.js:1510:22)
+      at cast (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\cast.js:312:39)
+      at cast (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\cast.js:75:18)
+      at model.Query.Query.cast (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:4966:12)
+      at model.Query.Query._castConditions (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:2058:10)
+      at model.Query.<anonymous> (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:2085:8) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '=='
+  },
+  valueType: 'number'
+}
+[2021-11-15T21:33:28.658] [ERROR] myError - CastError: Cast to Number failed for value "NaN" (type number) at path "price" for model "Product"
+    at model.Query.exec (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:4543:21)
+    at model.Query.Query.then (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:4642:15)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5) {
+  messageFormat: undefined,
+  stringValue: '"NaN"',
+  kind: 'Number',
+  value: NaN,
+  path: 'price',
+  reason: AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert.ok(!isNaN(val))
+  
+      at castNumber (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\cast\number.js:28:10)
+      at SchemaNumber.cast (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\schema\number.js:371:12)
+      at SchemaNumber.handleSingle (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\schema\number.js:382:15)
+      at SchemaNumber.castForQuery (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\schema\number.js:423:20)
+      at SchemaNumber.SchemaType.castForQueryWrapper (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\schematype.js:1510:22)
+      at cast (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\cast.js:312:39)
+      at cast (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\cast.js:75:18)
+      at model.Query.Query.cast (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:4966:12)
+      at model.Query.Query._castConditions (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:2058:10)
+      at model.Query.<anonymous> (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:2085:8) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '=='
+  },
+  valueType: 'number'
+}
+[2021-11-15T21:34:05.931] [ERROR] myError - CastError: Cast to Number failed for value "NaN" (type number) at path "price" for model "Product"
+    at model.Query.exec (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:4543:21)
+    at model.Query.Query.then (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:4642:15)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5) {
+  messageFormat: undefined,
+  stringValue: '"NaN"',
+  kind: 'Number',
+  value: NaN,
+  path: 'price',
+  reason: AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert.ok(!isNaN(val))
+  
+      at castNumber (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\cast\number.js:28:10)
+      at SchemaNumber.cast (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\schema\number.js:371:12)
+      at SchemaNumber.handleSingle (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\schema\number.js:382:15)
+      at SchemaNumber.castForQuery (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\schema\number.js:423:20)
+      at SchemaNumber.SchemaType.castForQueryWrapper (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\schematype.js:1510:22)
+      at cast (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\cast.js:312:39)
+      at cast (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\cast.js:75:18)
+      at model.Query.Query.cast (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:4966:12)
+      at model.Query.Query._castConditions (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:2058:10)
+      at model.Query.<anonymous> (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:2085:8) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '=='
+  },
+  valueType: 'number'
+}
+[2021-11-15T21:34:07.118] [ERROR] myError - CastError: Cast to Number failed for value "NaN" (type number) at path "price" for model "Product"
+    at model.Query.exec (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:4543:21)
+    at model.Query.Query.then (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:4642:15)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5) {
+  messageFormat: undefined,
+  stringValue: '"NaN"',
+  kind: 'Number',
+  value: NaN,
+  path: 'price',
+  reason: AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert.ok(!isNaN(val))
+  
+      at castNumber (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\cast\number.js:28:10)
+      at SchemaNumber.cast (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\schema\number.js:371:12)
+      at SchemaNumber.handleSingle (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\schema\number.js:382:15)
+      at SchemaNumber.castForQuery (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\schema\number.js:423:20)
+      at SchemaNumber.SchemaType.castForQueryWrapper (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\schematype.js:1510:22)
+      at cast (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\cast.js:312:39)
+      at cast (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\cast.js:75:18)
+      at model.Query.Query.cast (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:4966:12)
+      at model.Query.Query._castConditions (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:2058:10)
+      at model.Query.<anonymous> (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:2085:8) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '=='
+  },
+  valueType: 'number'
+}
+[2021-11-15T21:34:07.342] [ERROR] myError - CastError: Cast to Number failed for value "NaN" (type number) at path "price" for model "Product"
+    at model.Query.exec (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:4543:21)
+    at model.Query.Query.then (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:4642:15)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5) {
+  messageFormat: undefined,
+  stringValue: '"NaN"',
+  kind: 'Number',
+  value: NaN,
+  path: 'price',
+  reason: AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert.ok(!isNaN(val))
+  
+      at castNumber (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\cast\number.js:28:10)
+      at SchemaNumber.cast (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\schema\number.js:371:12)
+      at SchemaNumber.handleSingle (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\schema\number.js:382:15)
+      at SchemaNumber.castForQuery (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\schema\number.js:423:20)
+      at SchemaNumber.SchemaType.castForQueryWrapper (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\schematype.js:1510:22)
+      at cast (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\cast.js:312:39)
+      at cast (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\cast.js:75:18)
+      at model.Query.Query.cast (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:4966:12)
+      at model.Query.Query._castConditions (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:2058:10)
+      at model.Query.<anonymous> (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:2085:8) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '=='
+  },
+  valueType: 'number'
+}
+[2021-11-15T21:34:08.684] [ERROR] myError - CastError: Cast to Number failed for value "NaN" (type number) at path "price" for model "Product"
+    at model.Query.exec (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:4543:21)
+    at model.Query.Query.then (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:4642:15)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5) {
+  messageFormat: undefined,
+  stringValue: '"NaN"',
+  kind: 'Number',
+  value: NaN,
+  path: 'price',
+  reason: AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert.ok(!isNaN(val))
+  
+      at castNumber (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\cast\number.js:28:10)
+      at SchemaNumber.cast (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\schema\number.js:371:12)
+      at SchemaNumber.handleSingle (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\schema\number.js:382:15)
+      at SchemaNumber.castForQuery (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\schema\number.js:423:20)
+      at SchemaNumber.SchemaType.castForQueryWrapper (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\schematype.js:1510:22)
+      at cast (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\cast.js:312:39)
+      at cast (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\cast.js:75:18)
+      at model.Query.Query.cast (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:4966:12)
+      at model.Query.Query._castConditions (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:2058:10)
+      at model.Query.<anonymous> (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:2085:8) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '=='
+  },
+  valueType: 'number'
+}
+[2021-11-15T21:34:08.917] [ERROR] myError - CastError: Cast to Number failed for value "NaN" (type number) at path "price" for model "Product"
+    at model.Query.exec (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:4543:21)
+    at model.Query.Query.then (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:4642:15)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5) {
+  messageFormat: undefined,
+  stringValue: '"NaN"',
+  kind: 'Number',
+  value: NaN,
+  path: 'price',
+  reason: AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert.ok(!isNaN(val))
+  
+      at castNumber (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\cast\number.js:28:10)
+      at SchemaNumber.cast (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\schema\number.js:371:12)
+      at SchemaNumber.handleSingle (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\schema\number.js:382:15)
+      at SchemaNumber.castForQuery (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\schema\number.js:423:20)
+      at SchemaNumber.SchemaType.castForQueryWrapper (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\schematype.js:1510:22)
+      at cast (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\cast.js:312:39)
+      at cast (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\cast.js:75:18)
+      at model.Query.Query.cast (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:4966:12)
+      at model.Query.Query._castConditions (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:2058:10)
+      at model.Query.<anonymous> (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:2085:8) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '=='
+  },
+  valueType: 'number'
+}
+[2021-11-15T21:34:09.162] [ERROR] myError - CastError: Cast to Number failed for value "NaN" (type number) at path "price" for model "Product"
+    at model.Query.exec (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:4543:21)
+    at model.Query.Query.then (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:4642:15)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5) {
+  messageFormat: undefined,
+  stringValue: '"NaN"',
+  kind: 'Number',
+  value: NaN,
+  path: 'price',
+  reason: AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert.ok(!isNaN(val))
+  
+      at castNumber (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\cast\number.js:28:10)
+      at SchemaNumber.cast (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\schema\number.js:371:12)
+      at SchemaNumber.handleSingle (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\schema\number.js:382:15)
+      at SchemaNumber.castForQuery (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\schema\number.js:423:20)
+      at SchemaNumber.SchemaType.castForQueryWrapper (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\schematype.js:1510:22)
+      at cast (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\cast.js:312:39)
+      at cast (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\cast.js:75:18)
+      at model.Query.Query.cast (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:4966:12)
+      at model.Query.Query._castConditions (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:2058:10)
+      at model.Query.<anonymous> (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:2085:8) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '=='
+  },
+  valueType: 'number'
+}
+[2021-11-15T21:34:14.410] [ERROR] myError - CastError: Cast to Number failed for value "NaN" (type number) at path "price" for model "Product"
+    at model.Query.exec (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:4543:21)
+    at model.Query.Query.then (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:4642:15)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5) {
+  messageFormat: undefined,
+  stringValue: '"NaN"',
+  kind: 'Number',
+  value: NaN,
+  path: 'price',
+  reason: AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert.ok(!isNaN(val))
+  
+      at castNumber (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\cast\number.js:28:10)
+      at SchemaNumber.cast (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\schema\number.js:371:12)
+      at SchemaNumber.handleSingle (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\schema\number.js:382:15)
+      at SchemaNumber.castForQuery (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\schema\number.js:423:20)
+      at SchemaNumber.SchemaType.castForQueryWrapper (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\schematype.js:1510:22)
+      at cast (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\cast.js:312:39)
+      at cast (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\cast.js:75:18)
+      at model.Query.Query.cast (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:4966:12)
+      at model.Query.Query._castConditions (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:2058:10)
+      at model.Query.<anonymous> (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:2085:8) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '=='
+  },
+  valueType: 'number'
+}
+[2021-11-15T21:34:14.620] [ERROR] myError - CastError: Cast to Number failed for value "NaN" (type number) at path "price" for model "Product"
+    at model.Query.exec (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:4543:21)
+    at model.Query.Query.then (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:4642:15)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5) {
+  messageFormat: undefined,
+  stringValue: '"NaN"',
+  kind: 'Number',
+  value: NaN,
+  path: 'price',
+  reason: AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert.ok(!isNaN(val))
+  
+      at castNumber (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\cast\number.js:28:10)
+      at SchemaNumber.cast (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\schema\number.js:371:12)
+      at SchemaNumber.handleSingle (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\schema\number.js:382:15)
+      at SchemaNumber.castForQuery (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\schema\number.js:423:20)
+      at SchemaNumber.SchemaType.castForQueryWrapper (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\schematype.js:1510:22)
+      at cast (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\cast.js:312:39)
+      at cast (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\cast.js:75:18)
+      at model.Query.Query.cast (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:4966:12)
+      at model.Query.Query._castConditions (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:2058:10)
+      at model.Query.<anonymous> (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:2085:8) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '=='
+  },
+  valueType: 'number'
+}
+[2021-11-15T21:34:14.834] [ERROR] myError - CastError: Cast to Number failed for value "NaN" (type number) at path "price" for model "Product"
+    at model.Query.exec (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:4543:21)
+    at model.Query.Query.then (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:4642:15)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5) {
+  messageFormat: undefined,
+  stringValue: '"NaN"',
+  kind: 'Number',
+  value: NaN,
+  path: 'price',
+  reason: AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert.ok(!isNaN(val))
+  
+      at castNumber (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\cast\number.js:28:10)
+      at SchemaNumber.cast (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\schema\number.js:371:12)
+      at SchemaNumber.handleSingle (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\schema\number.js:382:15)
+      at SchemaNumber.castForQuery (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\schema\number.js:423:20)
+      at SchemaNumber.SchemaType.castForQueryWrapper (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\schematype.js:1510:22)
+      at cast (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\cast.js:312:39)
+      at cast (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\cast.js:75:18)
+      at model.Query.Query.cast (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:4966:12)
+      at model.Query.Query._castConditions (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:2058:10)
+      at model.Query.<anonymous> (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:2085:8) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '=='
+  },
+  valueType: 'number'
+}
+[2021-11-15T21:34:43.788] [ERROR] myError - CastError: Cast to Number failed for value "NaN" (type number) at path "price" for model "Product"
+    at model.Query.exec (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:4543:21)
+    at model.Query.Query.then (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:4642:15)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5) {
+  messageFormat: undefined,
+  stringValue: '"NaN"',
+  kind: 'Number',
+  value: NaN,
+  path: 'price',
+  reason: AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert.ok(!isNaN(val))
+  
+      at castNumber (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\cast\number.js:28:10)
+      at SchemaNumber.cast (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\schema\number.js:371:12)
+      at SchemaNumber.handleSingle (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\schema\number.js:382:15)
+      at SchemaNumber.castForQuery (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\schema\number.js:423:20)
+      at SchemaNumber.SchemaType.castForQueryWrapper (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\schematype.js:1510:22)
+      at cast (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\cast.js:312:39)
+      at cast (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\cast.js:75:18)
+      at model.Query.Query.cast (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:4966:12)
+      at model.Query.Query._castConditions (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:2058:10)
+      at model.Query.<anonymous> (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:2085:8) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '=='
+  },
+  valueType: 'number'
+}
+[2021-11-15T21:34:44.208] [ERROR] myError - CastError: Cast to Number failed for value "NaN" (type number) at path "price" for model "Product"
+    at model.Query.exec (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:4543:21)
+    at model.Query.Query.then (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:4642:15)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5) {
+  messageFormat: undefined,
+  stringValue: '"NaN"',
+  kind: 'Number',
+  value: NaN,
+  path: 'price',
+  reason: AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert.ok(!isNaN(val))
+  
+      at castNumber (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\cast\number.js:28:10)
+      at SchemaNumber.cast (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\schema\number.js:371:12)
+      at SchemaNumber.handleSingle (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\schema\number.js:382:15)
+      at SchemaNumber.castForQuery (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\schema\number.js:423:20)
+      at SchemaNumber.SchemaType.castForQueryWrapper (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\schematype.js:1510:22)
+      at cast (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\cast.js:312:39)
+      at cast (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\cast.js:75:18)
+      at model.Query.Query.cast (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:4966:12)
+      at model.Query.Query._castConditions (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:2058:10)
+      at model.Query.<anonymous> (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:2085:8) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '=='
+  },
+  valueType: 'number'
+}
+[2021-11-15T21:34:45.342] [ERROR] myError - CastError: Cast to Number failed for value "NaN" (type number) at path "price" for model "Product"
+    at model.Query.exec (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:4543:21)
+    at model.Query.Query.then (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:4642:15)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5) {
+  messageFormat: undefined,
+  stringValue: '"NaN"',
+  kind: 'Number',
+  value: NaN,
+  path: 'price',
+  reason: AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert.ok(!isNaN(val))
+  
+      at castNumber (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\cast\number.js:28:10)
+      at SchemaNumber.cast (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\schema\number.js:371:12)
+      at SchemaNumber.handleSingle (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\schema\number.js:382:15)
+      at SchemaNumber.castForQuery (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\schema\number.js:423:20)
+      at SchemaNumber.SchemaType.castForQueryWrapper (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\schematype.js:1510:22)
+      at cast (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\cast.js:312:39)
+      at cast (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\cast.js:75:18)
+      at model.Query.Query.cast (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:4966:12)
+      at model.Query.Query._castConditions (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:2058:10)
+      at model.Query.<anonymous> (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:2085:8) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '=='
+  },
+  valueType: 'number'
+}
+[2021-11-15T21:34:47.288] [ERROR] myError - CastError: Cast to Number failed for value "NaN" (type number) at path "price" for model "Product"
+    at model.Query.exec (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:4543:21)
+    at model.Query.Query.then (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:4642:15)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5) {
+  messageFormat: undefined,
+  stringValue: '"NaN"',
+  kind: 'Number',
+  value: NaN,
+  path: 'price',
+  reason: AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert.ok(!isNaN(val))
+  
+      at castNumber (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\cast\number.js:28:10)
+      at SchemaNumber.cast (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\schema\number.js:371:12)
+      at SchemaNumber.handleSingle (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\schema\number.js:382:15)
+      at SchemaNumber.castForQuery (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\schema\number.js:423:20)
+      at SchemaNumber.SchemaType.castForQueryWrapper (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\schematype.js:1510:22)
+      at cast (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\cast.js:312:39)
+      at cast (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\cast.js:75:18)
+      at model.Query.Query.cast (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:4966:12)
+      at model.Query.Query._castConditions (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:2058:10)
+      at model.Query.<anonymous> (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:2085:8) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '=='
+  },
+  valueType: 'number'
+}
+[2021-11-15T21:34:47.497] [ERROR] myError - CastError: Cast to Number failed for value "NaN" (type number) at path "price" for model "Product"
+    at model.Query.exec (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:4543:21)
+    at model.Query.Query.then (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:4642:15)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5) {
+  messageFormat: undefined,
+  stringValue: '"NaN"',
+  kind: 'Number',
+  value: NaN,
+  path: 'price',
+  reason: AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert.ok(!isNaN(val))
+  
+      at castNumber (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\cast\number.js:28:10)
+      at SchemaNumber.cast (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\schema\number.js:371:12)
+      at SchemaNumber.handleSingle (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\schema\number.js:382:15)
+      at SchemaNumber.castForQuery (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\schema\number.js:423:20)
+      at SchemaNumber.SchemaType.castForQueryWrapper (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\schematype.js:1510:22)
+      at cast (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\cast.js:312:39)
+      at cast (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\cast.js:75:18)
+      at model.Query.Query.cast (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:4966:12)
+      at model.Query.Query._castConditions (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:2058:10)
+      at model.Query.<anonymous> (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:2085:8) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '=='
+  },
+  valueType: 'number'
+}
+[2021-11-15T21:34:47.700] [ERROR] myError - CastError: Cast to Number failed for value "NaN" (type number) at path "price" for model "Product"
+    at model.Query.exec (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:4543:21)
+    at model.Query.Query.then (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:4642:15)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5) {
+  messageFormat: undefined,
+  stringValue: '"NaN"',
+  kind: 'Number',
+  value: NaN,
+  path: 'price',
+  reason: AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert.ok(!isNaN(val))
+  
+      at castNumber (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\cast\number.js:28:10)
+      at SchemaNumber.cast (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\schema\number.js:371:12)
+      at SchemaNumber.handleSingle (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\schema\number.js:382:15)
+      at SchemaNumber.castForQuery (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\schema\number.js:423:20)
+      at SchemaNumber.SchemaType.castForQueryWrapper (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\schematype.js:1510:22)
+      at cast (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\cast.js:312:39)
+      at cast (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\cast.js:75:18)
+      at model.Query.Query.cast (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:4966:12)
+      at model.Query.Query._castConditions (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:2058:10)
+      at model.Query.<anonymous> (D:\Cursos\Programación\Programacion-Backend\Entregas\Pre entrega 3\node_modules\mongoose\lib\query.js:2085:8) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '=='
+  },
+  valueType: 'number'
+}

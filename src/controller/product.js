@@ -136,20 +136,21 @@ exports.getByCode = async (req, res, next) => {
 
 exports.getByPrice = async (req, res, next) => {
   try {
-    const pricemin = parseInt(req.body.minvalue);
-    const pricemax = parseInt(req.body.maxvalue);
     loggerDefault.info(
       `El usuario quiere productos entre precio: ${pricemin} y ${pricemax}`
     );
 
-    const productsRetrieved = await product.getProductByPrice(
-      pricemin,
-      pricemax
-    );
-    /*ACA ESTÁ EL PROBLEMA. Porque si pongo render me renderiza la página pero con un URL de /API/blahblah */
-    console.log("Renderizará la página");
-    res.render("./pages/products-finded", { productsRetrieved });
-    // res.redirect("/welcome");
+    if (req.query.minvalue === undefined || req.query.maxvalue === undefined) {
+      res.render("./pages/search-products");
+    } else {
+      const pricemin = parseInt(req.query.minvalue);
+      const pricemax = parseInt(req.query.maxvalue);
+      const productsRetrieved = await product.getProductByPrice(
+        pricemin,
+        pricemax
+      );
+      res.render("./pages/products-finded", { productsRetrieved });
+    }
   } catch (error) {
     loggerError.error(error);
     res.json(error);

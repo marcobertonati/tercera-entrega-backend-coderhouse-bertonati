@@ -19,6 +19,7 @@ const signUpController = require("../controller/signupController");
 
 module.exports = (router) => {
   router
+    /*Ruta por defecto si no está logueado */
     .get("/", checkAuthentication, (req, res, next) => {
       res.render("./pages/login");
     })
@@ -30,12 +31,10 @@ module.exports = (router) => {
     })
 
     /*Vistas de busquedad de productos por precio */
-    .get("/buscar/precio", (req, res, next) => {
-      res.render("./pages/search-products");
-    })
+    .get("/buscar/precio?", checkAuthentication, productController.getByPrice)
 
     /*Vistas de carrito */
-    .get("/carrito/vista", cartController.getCartSession)
+    .get("/carrito/vista", checkAuthentication, cartController.getCartSession)
     .get("/purchase-completed", (req, res, next) => {
       res.render("./pages/purchase-completed");
     })
@@ -47,9 +46,9 @@ module.exports = (router) => {
     .get("/login", (req, res, next) => {
       res.render("./pages/login");
     })
-
     .get("/signup", signUpController.signUp)
 
+    /*Vistas de perfil y goodbye */
     .get("/welcome", checkAuthentication, (req, res, next) => {
       const data = req.session.passport;
       res.render("./pages/welcome", { data });
@@ -58,6 +57,7 @@ module.exports = (router) => {
       res.render("./pages/goodbye");
     })
 
+    /*Vista de errores */
     .get("/error-login", (req, res, next) => {
       res.render("./pages/error-login");
     })

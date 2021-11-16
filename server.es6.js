@@ -5,24 +5,19 @@ const app = express();
 /*Le pasamos la constante app que creamos arriba */
 const http = require("http").Server(app);
 
-
 /*Le pasamos la constante http */
 const io = require("socket.io")(http);
 
-
 /*Cargo módulo Handlebars */
 const handlebars = require("express-handlebars");
-
 
 /*Requiero cors */
 const cors = require("cors");
 app.use(cors());
 
-
 /*Requiero compression*/
 const compression = require("compression");
 app.use(compression());
-
 
 /*Requiero Multer*/
 const multer = require("multer");
@@ -62,17 +57,15 @@ app.use(
     resave: true,
     saveUninitialized: true,
     cookie: {
-      maxAge: 60000,
+      maxAge: 180000,
     },
   })
 );
 app.use(cookieParser());
 
-
 /*Middleware Passport: SIEMPRE VAN ANTES QUE LAS RUTAS */
 app.use(passport.initialize());
 app.use(passport.session());
-
 
 /*Router */
 /*Requerimos las rutas que va a ofrecer nuestra aplicación */
@@ -125,7 +118,6 @@ http://localhost:8080/static/js/index.js
 */
 // Utilizamos el prefijo virtual '/static'
 app.use("/static", express.static(__dirname + "/public"));
-
 
 /*Rutas del API: Productos*/
 app.use(routesProducts(routerProducts));
